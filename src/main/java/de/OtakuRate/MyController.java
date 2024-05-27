@@ -8,7 +8,7 @@ import java.util.List;
 @RestController
 public class MyController {
 
-    @GetMapping("/anime/rating")
+    @GetMapping("rate")
     public List<AnimeRating> getAnimeRating() {
 
         AnimeRating rating1 = new AnimeRating("Naruto", 100, "Great experience!");
