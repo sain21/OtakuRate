@@ -11,7 +11,6 @@ public class MyController {
 
     @GetMapping("rate")
     public List<AnimeRating> index() {
-
         AnimeRating rating1 = new AnimeRating("Naruto", 100, "Great experience!");
         AnimeRating rating2 = new AnimeRating("One Piece", 80, "Good but could be better");
         AnimeRating rating3 = new AnimeRating("Attack on Titan", 95, "Amazing!");
