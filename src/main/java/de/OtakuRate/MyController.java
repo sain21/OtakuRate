@@ -9,7 +9,7 @@ import java.util.*;
 @CrossOrigin(origins = {"https://otakurate-frontend.onrender.com"})
 public class MyController {
 
-    @GetMapping("rate")
+    @GetMapping("/rate")
     public List<AnimeRating> index() {
         AnimeRating rating1 = new AnimeRating("Naruto", 100, "Great experience!");
         AnimeRating rating2 = new AnimeRating("One Piece", 80, "Good but could be better");
