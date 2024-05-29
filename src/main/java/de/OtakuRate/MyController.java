@@ -1,14 +1,12 @@
 package de.OtakuRate;
-import lombok.AllArgsConstructor;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
-@AllArgsConstructor
-@RequestMapping("/rate")
-
+import java.util.*;
+@RestController
+@CrossOrigin(origins = {"https://otakurate-frontend.onrender.com/rate"})
 public class MyController {
 
     @GetMapping("/rate")
