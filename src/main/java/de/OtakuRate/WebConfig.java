@@ -8,11 +8,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 @EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {
+
     @Override
-    public void addCorsMappings(final CorsRegistry registry) {
-        registry
-                .addMapping("/**")
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
                 .allowedMethods("*")
-                .allowedOrigins("http://localhost:5173/", "https://otakurate-frontend.onrender.com");
+                .allowedOrigins("http://localhost:5177/",
+                        "https://otakurate-frontend.onrender.com/");
     }
 }
