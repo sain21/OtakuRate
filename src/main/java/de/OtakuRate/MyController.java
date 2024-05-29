@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.*;
 @RestController
-@CrossOrigin(origins = {"https://otakurate-frontend.onrender.com/rate"})
+@CrossOrigin(origins = {"https://otakurate-frontend.onrender.com"})
 public class MyController {
 
     @GetMapping("/rate")
