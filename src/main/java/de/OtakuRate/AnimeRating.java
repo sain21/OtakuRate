@@ -25,6 +25,25 @@ public class AnimeRating {
     public AnimeRating() {
     }
 
+public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setAnimeTitle(String animeTitle) {
+        this.animeTitle = animeTitle;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public void setExperience(String experience) {
+        this.experience = experience;
+    }
 
     public String getAnimeTitle() {
         return animeTitle;
