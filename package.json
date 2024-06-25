@@ -110,6 +110,7 @@
     "jest-validate": "^29.7.0",
     "jest-watcher": "^29.7.0",
     "jest-worker": "^29.7.0",
+    "jikan-node": "^1.2.1",
     "js-tokens": "^4.0.0",
     "js-yaml": "^3.14.1",
     "jsesc": "^2.5.2",
