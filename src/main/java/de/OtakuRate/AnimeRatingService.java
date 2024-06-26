@@ -15,4 +15,10 @@ public class AnimeRatingService {
     public Iterable<AnimeRating> findAllAnimeRatings() {
         return animeRatingRepo.findAll();
     }
+
+    public void deleteAnimeRatingById(Long id) {
+        animeRatingRepo.deleteById(id);
+    }
+
+
 }

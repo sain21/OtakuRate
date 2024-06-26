@@ -21,6 +21,10 @@ public class MyController {
     public List<AnimeRating> findAllAnimeRatings() {
         return (List<AnimeRating>) animeRatingService.findAllAnimeRatings();
     }
+    @DeleteMapping("/{id}")
+    public void deleteAnimeRatingById(@PathVariable Long id) {
+        animeRatingService.deleteAnimeRatingById(id);
+    }
 
 
 
