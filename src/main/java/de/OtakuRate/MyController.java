@@ -1,6 +1,5 @@
 package de.OtakuRate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,7 +13,7 @@ public class MyController {
     private AnimeRatingService animeRatingService;
    @PostMapping
     public AnimeRating createAnimeRating(@RequestBody AnimeRating animeRating) {
-        return animeRatingService.saveOrUpdateAnimeRating(animeRating);
+        return animeRatingService.saveAnimeRating(animeRating);
     }
 
     @GetMapping
@@ -25,7 +24,10 @@ public class MyController {
     public void deleteAnimeRatingById(@PathVariable Long id) {
         animeRatingService.deleteAnimeRatingById(id);
     }
-
+@PutMapping("/{id}")
+    public AnimeRating updateAnimeRating(@PathVariable Long id, @RequestBody AnimeRating animeRating) {
+        return animeRatingService.updateAnimeRating(id, animeRating);
+    }
 
 
 

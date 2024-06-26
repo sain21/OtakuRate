@@ -8,7 +8,7 @@ public class AnimeRatingService {
     @Autowired
     AnimeRatingRepo animeRatingRepo;
 
-    public AnimeRating saveOrUpdateAnimeRating(AnimeRating animeRating) {
+    public AnimeRating saveAnimeRating(AnimeRating animeRating) {
         return animeRatingRepo.save(animeRating);
     }
 
@@ -18,6 +18,19 @@ public class AnimeRatingService {
 
     public void deleteAnimeRatingById(Long id) {
         animeRatingRepo.deleteById(id);
+    }
+public AnimeRating updateAnimeRating(Long id, AnimeRating newAnimeRating) {
+        return animeRatingRepo.findById(id)
+                .map(animeRating ->{
+                    animeRating.setAnimeTitle(newAnimeRating.getAnimeTitle());
+                    animeRating.setRating(newAnimeRating.getRating());
+                    animeRating.setExperience(newAnimeRating.getExperience());
+                    return animeRatingRepo.save(animeRating);
+                })
+                .orElseGet(() -> {
+                    newAnimeRating.setId(id);
+                    return animeRatingRepo.save(newAnimeRating);
+                });
     }
 
 
