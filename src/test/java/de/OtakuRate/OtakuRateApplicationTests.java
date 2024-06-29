@@ -8,6 +8,6 @@ class OtakuRateApplicationTests {
 
     @Test
     void contextLoads() {
-    throw new RuntimeException("only for test");
+   // throw new RuntimeException("only for test");
     }
 }
